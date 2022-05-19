@@ -35,7 +35,7 @@
               <a href="#breif" class="nav-link">Diabetes in nutshell</a>
             </li>
             <li class="nav-item">
-              <a href="#about_us" class="nav-link">Instructors</a>
+              <a href="#about_us" class="nav-link">About Us</a>
             </li>
           </ul>
         </div>
@@ -62,7 +62,7 @@
     <!-- Footer -->
     <footer class="p-5 bg-dark text-white text-center position-relative">
       <div class="container">
-        <p class="lead">Copyright &copy; 2021 Frontend Bootcamp</p>
+        <p class="lead">Copyright &copy; 2022 Team 9</p>
 
         <a href="#" class="position-absolute bottom-0 end-0 p-5">
           <i class="bi bi-arrow-up-circle h1"></i>
@@ -75,13 +75,13 @@
       class="modal fade"
       id="predictor"
       tabindex="-1"
-      aria-labelledby="enrollLabel"
+      aria-labelledby="predictorLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="predictLabel">Predictor</h5>
+            <h5 class="modal-title" id="predictorLabel">Predictor</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
           </div>
           <div class="modal-body">
@@ -89,8 +89,11 @@
             <form>
               <div class="mb-3">
                 <label for="Full Name" class="col-form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" required="required" />
+                <input type="text" class="form-control" id="name" required="required"/>
               </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" />
               <div class="mb-3">
                 <label for="Age" class="col-form-label">Age</label>
                 <input type="number" class="form-control" id="age"  />
@@ -104,9 +107,6 @@
                   <label><input type="radio" name="optradio"> Female</label>
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="phone" class="col-form-label">Phone:</label>
-                <input type="tel" class="form-control" id="phone" />
               </div>
               <div class="mb-3">
                 <label for="Height" class="col-form-label">Height</label>
@@ -115,6 +115,10 @@
               <div class="mb-3">
                 <label for="Weight" class="col-form-label">Weight</label>
                 <input type="number" class="form-control" id="weight"  />
+              </div>
+              <div class="mb-3">
+                <label for="BMI" class="col-form-label">BMI</label>
+                <input type="number" class="form-control" id="bmi"  />
               </div>
               <div class="mb-3">
                 <label for="Waist" class="col-form-label">Waist</label>
