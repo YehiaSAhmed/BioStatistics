@@ -13,10 +13,10 @@ app = Flask(__name__)
 
 @app.route('/predict')
 def predict():
-    x=(207,187,46,4.5,44,0,67,201,31.5,150,74,46,49,0.94)
+    x=(193,77,49,3.9,19,0,61,119,22.5,118,70,32,38,0.84)
     pred=d.predection(x)
     if (pred == 0):
-        return 'The patient is not diabetic'
+        return render_template('f_diabetic.html')
     else:
         return render_template('t_diabetic.html')
 
