@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+'''
 import pickle
-import numpy as np
 from sklearn.preprocessing import StandardScaler
+'''
 import Diabetes_MLwithcleantree as d
 
 # def load_moudel(x):
@@ -11,23 +12,38 @@ import Diabetes_MLwithcleantree as d
 
 app = Flask(__name__)
 
-@app.route('/predict')
-def predict():
-    x=(193,77,49,3.9,19,0,61,119,22.5,118,70,32,38,0.84)
-    pred=d.predection(x)
-    if (pred == 0):
-        return render_template('f_diabetic.html')
-    else:
-        return render_template('t_diabetic.html')
-
-    
 
 @app.route('/')
-
-def web():
+def index():
     return render_template('index.html')
 
+
+@app.route('/InputForm.html', methods = ['POST', 'GET'])
+def form():
+    if request.method == "POST":
+        chol_hdl_ratio = (float(request.form['0'])) / (float(request.form['2']))
+        waist_hip_ratio = (float(request.form['11'])) / (float(request.form['12']))
+        if request.form['5'] == 'Female':
+            Gender = 0
+        else:
+            Gender = 1
+        std_data = (request.form['0'], request.form['1'], request.form['2'], chol_hdl_ratio, request.form['4'], Gender,
+                    request.form['6'], request.form['7'], request.form['8'], request.form['9'], request.form['10'],
+                    request.form['11'], request.form['12'], waist_hip_ratio)
+        return result(std_data)
+    else:
+        return render_template('InputForm.html')
+    
+    
+def result(x):
+    pred=d.predection(x)
+    if (pred == 0):
+        return render_template("f_diabetic.html")
+    else:
+        return render_template("t_diabetic.html")
+
+
 if __name__ =="__main__":
-    app.run(debug=True)
+    app.run()
 
 
