@@ -31,14 +31,14 @@
                         <div class="row">
                             <div class="mb-3">
                                 <label for="Full Name" class="col-form-label">Full Name</label>
-                                <input type="text" class="form-control" required />
+                                <input type="text" class="form-control" onkeydown="return /[a-z\s]/i.test(event.key)" spellcheck="true" placeholder="John Smith William" pattern="[a-Za-z\s]" minlength="10" maxlength="50" required />
                               </div>
                               <div class="mb-3">
-                                <label for="phone" class="col-form-label">Phone:</label>
-                                <input type="tel" class="form-control" required />
+                                <label for="phone" class="col-form-label">Phone</label>
+                                <input type="tel" name="phone" class="form-control" placeholder="012345678901" pattern="[0-9]{11}" required />
                               <div class="mb-3">
                                 <label for="Age" class="col-form-label">Age</label>
-                                <input type="number" class="form-control" name="4" required />
+                                <input type="number" class="form-control" name="4" min="0" max="122"  required />
                               </div>
                               <div class="mb-3">
                                 <label for="Gender" class="col-form-label">Gender</label>
@@ -52,43 +52,43 @@
                               </div>
                               <div class="mb-3">
                                 <label for="Height" class="col-form-label">Height</label>
-                                <input type="number" class="form-control" name="6" required />
+                                <input type="number" class="form-control" name="6" min="50" max="100" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Weight" class="col-form-label">Weight</label>
-                                <input type="number" class="form-control" name="7" required />
+                                <input type="number" class="form-control" name="7" min="50" max="350" required />
                               </div>
                               <div class="mb-3">
                                 <label for="BMI" class="col-form-label">BMI</label>
-                                <input type="number" class="form-control" name="8" required />
+                                <input type="number" class="form-control" name="8" min="10" max="60" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Waist" class="col-form-label">Waist</label>
-                                <input type="number" class="form-control" name="11" required />
+                                <input type="number" class="form-control" name="11" min="20" max="60" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Hip" class="col-form-label">Hip</label>
-                                <input type="number" class="form-control" name="12" required />
+                                <input type="number" class="form-control" name="12" min="30" max="70" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Cholesterol" class="col-form-label">Cholesterol</label>
-                                <input type="number" class="form-control" name="0" required />
+                                <input type="number" class="form-control" name="0" min="75" max="450" required />
                               </div>
                               <div class="mb-3">
                                 <label for="HDL Cholesterol" class="col-form-label">HDL Cholesterol</label>
-                                <input type="number" class="form-control" name="2" required />
+                                <input type="number" class="form-control" name="2" min="10" max="150" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Glucose" class="col-form-label">Glucose</label>
-                                <input type="number" class="form-control" name="1" required />
+                                <input type="number" class="form-control" name="1" min="40" max="400" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Systolic BP" class="col-form-label">Systolic Blood Pressure</label>
-                                <input type="number" class="form-control" name="9" required />
+                                <input type="number" class="form-control" name="9" min="75" max="250" required />
                               </div>
                               <div class="mb-3">
                                 <label for="Diastolic BP" class="col-form-label">Diastolic Blood Pressure</label>
-                                <input type="number" class="form-control" name="10" required />
+                                <input type="number" class="form-control" name="10" min="45" max="125" required />
                         </div>
                     </form>
                         <button type="submit" class="btn btn-primary "  >View Result</button>
