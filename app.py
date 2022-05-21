@@ -21,7 +21,7 @@ def index():
 @app.route('/InputForm.html', methods = ['POST', 'GET'])
 def form():
     if request.method == "POST":
-        chol_hdl_ratio = (float(request.form['2'])) / (float(request.form['0']))
+        chol_hdl_ratio = (float(request.form['0'])) / (float(request.form['2']))
         waist_hip_ratio = (float(request.form['11'])) / (float(request.form['12']))
         if request.form['5'] == 'Female':
             Gender = 0
